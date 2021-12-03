@@ -13,6 +13,23 @@
 		761C0BE02756117C009BA9DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761C0BDE2756117C009BA9DF /* Main.storyboard */; };
 		761C0BE22756117E009BA9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761C0BE12756117E009BA9DF /* Assets.xcassets */; };
 		761C0BE52756117E009BA9DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761C0BE32756117E009BA9DF /* LaunchScreen.storyboard */; };
+		761C0BEE27571634009BA9DF /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0BED27571634009BA9DF /* LiveData.swift */; };
+		761C0BF22757264B009BA9DF /* CollegeAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0BF02757264A009BA9DF /* CollegeAllViewController.swift */; };
+		761C0BF32757264B009BA9DF /* CollegeAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761C0BF12757264A009BA9DF /* CollegeAllViewController.xib */; };
+		761C0BFE27572865009BA9DF /* CollegeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0BFD27572865009BA9DF /* CollegeApi.swift */; };
+		761C0C0127573EE2009BA9DF /* CollegeAllViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0C0027573EE2009BA9DF /* CollegeAllViewModel.swift */; };
+		761C0C09275745DE009BA9DF /* CollegeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0C07275745DE009BA9DF /* CollegeListCell.swift */; };
+		761C0C0A275745DE009BA9DF /* CollegeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 761C0C08275745DE009BA9DF /* CollegeListCell.xib */; };
+		761C0C0D2757513F009BA9DF /* CollegeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0C0C2757513F009BA9DF /* CollegeItem.swift */; };
+		761C0C1027575F1B009BA9DF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 761C0C0F27575F1B009BA9DF /* Kingfisher */; };
+		761C0C1327575FAC009BA9DF /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0C1227575FAC009BA9DF /* NetworkImage.swift */; };
+		761C0C152757622B009BA9DF /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0C142757622B009BA9DF /* Screen.swift */; };
+		761C0C17275769A0009BA9DF /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0C162757699F009BA9DF /* TableDataSource.swift */; };
+		761C0C19275769B5009BA9DF /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C0C18275769B5009BA9DF /* CollectionDataSource.swift */; };
+		766A02442758CF6200EA567B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766A02432758CF6200EA567B /* LoadingView.swift */; };
+		766A0247275A0DF800EA567B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766A0246275A0DF800EA567B /* BaseTableViewController.swift */; };
+		766A0249275A0E1A00EA567B /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766A0248275A0E1A00EA567B /* BaseCollectionViewController.swift */; };
+		766A024C275A0F5C00EA567B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 766A024B275A0F5C00EA567B /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +41,21 @@
 		761C0BE12756117E009BA9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		761C0BE42756117E009BA9DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		761C0BE62756117E009BA9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		761C0BED27571634009BA9DF /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
+		761C0BF02757264A009BA9DF /* CollegeAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeAllViewController.swift; sourceTree = "<group>"; };
+		761C0BF12757264A009BA9DF /* CollegeAllViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollegeAllViewController.xib; sourceTree = "<group>"; };
+		761C0BFD27572865009BA9DF /* CollegeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeApi.swift; sourceTree = "<group>"; };
+		761C0C0027573EE2009BA9DF /* CollegeAllViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeAllViewModel.swift; sourceTree = "<group>"; };
+		761C0C07275745DE009BA9DF /* CollegeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeListCell.swift; sourceTree = "<group>"; };
+		761C0C08275745DE009BA9DF /* CollegeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollegeListCell.xib; sourceTree = "<group>"; };
+		761C0C0C2757513F009BA9DF /* CollegeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeItem.swift; sourceTree = "<group>"; };
+		761C0C1227575FAC009BA9DF /* NetworkImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
+		761C0C142757622B009BA9DF /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		761C0C162757699F009BA9DF /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
+		761C0C18275769B5009BA9DF /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		766A02432758CF6200EA567B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		766A0246275A0DF800EA567B /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		766A0248275A0E1A00EA567B /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761C0C1027575F1B009BA9DF /* Kingfisher in Frameworks */,
+				766A024C275A0F5C00EA567B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +90,11 @@
 		761C0BD72756117C009BA9DF /* BindDemo */ = {
 			isa = PBXGroup;
 			children = (
+				766A0245275A0DE700EA567B /* Base */,
+				766A02422758CF4E00EA567B /* Views */,
+				761C0C1127575F8D009BA9DF /* Utils */,
+				761C0BEF27572033009BA9DF /* Example */,
+				761C0BEC27571626009BA9DF /* MVVM */,
 				761C0BD82756117C009BA9DF /* AppDelegate.swift */,
 				761C0BDA2756117C009BA9DF /* SceneDelegate.swift */,
 				761C0BDC2756117C009BA9DF /* ViewController.swift */,
@@ -65,6 +104,104 @@
 				761C0BE62756117E009BA9DF /* Info.plist */,
 			);
 			path = BindDemo;
+			sourceTree = "<group>";
+		};
+		761C0BEC27571626009BA9DF /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				761C0BED27571634009BA9DF /* LiveData.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		761C0BEF27572033009BA9DF /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				761C0BFA2757283D009BA9DF /* College */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		761C0BFA2757283D009BA9DF /* College */ = {
+			isa = PBXGroup;
+			children = (
+				761C0C0B27575132009BA9DF /* Model */,
+				761C0C0227574554009BA9DF /* Cell */,
+				761C0BFF27573ED1009BA9DF /* ViewModel */,
+				761C0BFC27572856009BA9DF /* Api */,
+				761C0BFB27572845009BA9DF /* ViewControllers */,
+			);
+			path = College;
+			sourceTree = "<group>";
+		};
+		761C0BFB27572845009BA9DF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				761C0BF02757264A009BA9DF /* CollegeAllViewController.swift */,
+				761C0BF12757264A009BA9DF /* CollegeAllViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		761C0BFC27572856009BA9DF /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				761C0BFD27572865009BA9DF /* CollegeApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		761C0BFF27573ED1009BA9DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				761C0C0027573EE2009BA9DF /* CollegeAllViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		761C0C0227574554009BA9DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				761C0C07275745DE009BA9DF /* CollegeListCell.swift */,
+				761C0C08275745DE009BA9DF /* CollegeListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		761C0C0B27575132009BA9DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				761C0C0C2757513F009BA9DF /* CollegeItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		761C0C1127575F8D009BA9DF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				761C0C142757622B009BA9DF /* Screen.swift */,
+				761C0C1227575FAC009BA9DF /* NetworkImage.swift */,
+				761C0C162757699F009BA9DF /* TableDataSource.swift */,
+				761C0C18275769B5009BA9DF /* CollectionDataSource.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		766A02422758CF4E00EA567B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				766A02432758CF6200EA567B /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		766A0245275A0DE700EA567B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				766A0246275A0DF800EA567B /* BaseTableViewController.swift */,
+				766A0248275A0E1A00EA567B /* BaseCollectionViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +220,10 @@
 			dependencies = (
 			);
 			name = BindDemo;
+			packageProductDependencies = (
+				761C0C0F27575F1B009BA9DF /* Kingfisher */,
+				766A024B275A0F5C00EA567B /* Alamofire */,
+			);
 			productName = BindDemo;
 			productReference = 761C0BD52756117C009BA9DF /* BindDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +252,10 @@
 				Base,
 			);
 			mainGroup = 761C0BCC2756117C009BA9DF;
+			packageReferences = (
+				761C0C0E27575F1A009BA9DF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				766A024A275A0F5C00EA567B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 761C0BD62756117C009BA9DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,9 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761C0BF32757264B009BA9DF /* CollegeAllViewController.xib in Resources */,
 				761C0BE52756117E009BA9DF /* LaunchScreen.storyboard in Resources */,
 				761C0BE22756117E009BA9DF /* Assets.xcassets in Resources */,
 				761C0BE02756117C009BA9DF /* Main.storyboard in Resources */,
+				761C0C0A275745DE009BA9DF /* CollegeListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +287,20 @@
 			files = (
 				761C0BDD2756117C009BA9DF /* ViewController.swift in Sources */,
 				761C0BD92756117C009BA9DF /* AppDelegate.swift in Sources */,
+				761C0C0D2757513F009BA9DF /* CollegeItem.swift in Sources */,
 				761C0BDB2756117C009BA9DF /* SceneDelegate.swift in Sources */,
+				761C0C152757622B009BA9DF /* Screen.swift in Sources */,
+				766A02442758CF6200EA567B /* LoadingView.swift in Sources */,
+				761C0BEE27571634009BA9DF /* LiveData.swift in Sources */,
+				761C0BFE27572865009BA9DF /* CollegeApi.swift in Sources */,
+				761C0C17275769A0009BA9DF /* TableDataSource.swift in Sources */,
+				761C0C1327575FAC009BA9DF /* NetworkImage.swift in Sources */,
+				761C0BF22757264B009BA9DF /* CollegeAllViewController.swift in Sources */,
+				761C0C0127573EE2009BA9DF /* CollegeAllViewModel.swift in Sources */,
+				766A0247275A0DF800EA567B /* BaseTableViewController.swift in Sources */,
+				761C0C09275745DE009BA9DF /* CollegeListCell.swift in Sources */,
+				761C0C19275769B5009BA9DF /* CollectionDataSource.swift in Sources */,
+				766A0249275A0E1A00EA567B /* BaseCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +457,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +467,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,6 +486,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -360,6 +522,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		761C0C0E27575F1A009BA9DF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ze230123/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		766A024A275A0F5C00EA567B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		761C0C0F27575F1B009BA9DF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 761C0C0E27575F1A009BA9DF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		766A024B275A0F5C00EA567B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 766A024A275A0F5C00EA567B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 761C0BCD2756117C009BA9DF /* Project object */;
 }
