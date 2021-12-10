@@ -6,12 +6,32 @@
 //
 
 import UIKit
-import EGKit
+import Base
 
-class CollectionDataSource<C, M>: NSObject, UICollectionViewDataSource where C: UICollectionViewCell, C: CellConfigurable, C.T == M {
-    var items: [M] = [] {
+class CollectionDataSource<Cell, Value>: NSObject, UICollectionViewDataSource where Cell: UICollectionViewCell, Cell: CellConfigurable, Cell.Value == Value {
+    private var items: [Value] = [] {
+        willSet {
+            if newValue.isEmpty {
+                indexPaths.removeAll()
+            } else {
+                let range = items.count..<newValue.count
+                indexPaths = range.map { IndexPath(item: $0, section: 0) }
+            }
+        }
+
         didSet {
-            collectionView?.reloadData()
+            if indexPaths.isEmpty {
+                collectionView?.reloadData()
+            } else {
+                collectionView?.insertItems(at: indexPaths)
+                collectionView?.reloadItems(at: indexPaths)
+            }
+        }
+    }
+
+    private var indexPaths: [IndexPath] = [] {
+        didSet {
+            print("indexPaths", indexPaths)
         }
     }
 
@@ -24,7 +44,8 @@ class CollectionDataSource<C, M>: NSObject, UICollectionViewDataSource where C: 
     init(collectionView: UICollectionView?) {
         self.collectionView = collectionView
         super.init()
-        collectionView?.registerCell(C.self)
+        collectionView?.registerCell(Cell.self)
+        collectionView?.dataSource = self
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,7 +53,7 @@ class CollectionDataSource<C, M>: NSObject, UICollectionViewDataSource where C: 
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeReusableCell(indexPath: indexPath) as C
+        let cell = collectionView.dequeReusableCell(indexPath: indexPath) as Cell
         cell.configure(items[indexPath.item])
         return cell
     }
@@ -43,19 +64,19 @@ extension CollectionDataSource {
         return items.isEmpty
     }
 
-    subscript(_ indexPath: IndexPath) -> M {
+    subscript(_ indexPath: IndexPath) -> Value {
         return items[indexPath.item]
     }
 
-    subscript(_ index: Int) -> M {
+    subscript(_ index: Int) -> Value {
         return items[index]
     }
 
-    func append(_ newElement: M) {
+    func append(_ newElement: Value) {
         items.append(newElement)
     }
 
-    func append<S>(contentsOf newElements: S) where M == S.Element, S: Sequence {
+    func append<S>(contentsOf newElements: S) where Value == S.Element, S: Sequence {
         items.append(contentsOf: newElements)
     }
 
@@ -65,7 +86,7 @@ extension CollectionDataSource {
 }
 
 extension CollectionDataSource: Observer {
-    func observer(_ value: [M]) {
+    func observer(_ value: [Value]) {
         items.append(contentsOf: value)
     }
 }

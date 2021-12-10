@@ -10,7 +10,7 @@ import Alamofire
 import CoreText
 
 /// 加载状态
-enum LoadState {
+public enum LoadState {
     /// 加载
     case loading
     /// 成功
@@ -21,9 +21,17 @@ enum LoadState {
     case empty
 }
 
+public enum ListLoadState {
+    case loading
+    case refresh
+    case success
+    case failure(Error)
+    case empty
+}
+
 class CollegeAllViewModel {
     @LiveData private(set) var list: [CollegeList.Item] = []
-    @LiveData private(set) var state: LoadState = .loading
+    @LiveState private(set) var state: ListLoadState = .loading
 
     var parameter = CollegeListParameter()
 
@@ -33,8 +41,14 @@ class CollegeAllViewModel {
         task?.cancel()
     }
 
-    func queryList(for index: Int) {
-        state = .loading
+    func queryList(for index: Int = 1) {
+        print("请求数据", index)
+
+        if list.isEmpty {
+            state = .loading
+        } else {
+            state = .refresh
+        }
 
         let url = "http://qa-apigateway.youzy.cn/youzy.dms.basiclib.api.college.query"
 
@@ -48,12 +62,13 @@ class CollegeAllViewModel {
         ).responseDecodable(of: RootResult<CollegeList>.self) { [weak self] response in
             switch response.result {
             case .success(let root):
+                print("请求成功", index)
+                self?.list = root.result.items
                 if root.result.items.isEmpty {
                     self?.state = .empty
                 } else {
                     self?.state = .success
                 }
-                self?.list = root.result.items
             case .failure(let error):
                 print("AF Error", error.localizedDescription)
                 self?.state = .failure(error)

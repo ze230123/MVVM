@@ -8,7 +8,6 @@
 import UIKit
 
 class LoadingView: UIView {
-//    let load = UIActivityIndicatorView(style: .medium)
     lazy var indicator: UIActivityIndicatorView = {
         if #available(iOS 13.0, *) {
             return UIActivityIndicatorView(style: .medium)
@@ -17,10 +16,14 @@ class LoadingView: UIView {
         }
     }()
 
+    deinit {
+        print("LoadingView did Deinit")
+    }
+
     init() {
         super.init(frame: .zero)
         backgroundColor = .white
-
+        indicator.startAnimating()
         indicator.translatesAutoresizingMaskIntoConstraints = false
         addSubview(indicator)
         NSLayoutConstraint.activate([
@@ -36,16 +39,14 @@ class LoadingView: UIView {
     }
 }
 
-//extension LoadingView: LoadAnimateable {
-//    var isLoading: Bool {
-//        return indicator.isAnimating
-//    }
-//
-//    func start() {
-//        indicator.startAnimating()
-//    }
-//
-//    func stop() {
-//        indicator.stopAnimating()
-//    }
-//}
+extension LoadingView {
+    func show(in view: UIView) {
+        frame = view.bounds
+        autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin]
+        view.addSubview(self)
+    }
+
+    func hide() {
+        removeFromSuperview()
+    }
+}

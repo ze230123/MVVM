@@ -5,43 +5,42 @@
 //  Created by youzy01 on 2021/12/1.
 //
 
-import Moya
 import Foundation
 
-enum CollegeApi {
-    case all(CollegeListParameter)
-}
-
-extension CollegeApi: TargetType {
-    var task: Task {
-        switch self {
-        case let .all(parameter):
-            return .requestParameters(parameters: parameter.parameters, encoding: JSONEncoding.default)
-        }
-    }
-
-    var path: String {
-        switch self {
-        case .all:
-            return "/youzy.dms.basiclib.api.college.query"
-        }
-    }
-
-    var method: Moya.Method {
-        return .post
-    }
-
-    var baseURL: URL {
-        switch self {
-        default:
-            return URL(string: "http://qa-apigateway.youzy.cn")!
-        }
-    }
-
-    var headers: [String : String]? {
-        return nil
-    }
-}
+//enum CollegeApi {
+//    case all(CollegeListParameter)
+//}
+//
+//extension CollegeApi: TargetType {
+//    var task: Task {
+//        switch self {
+//        case let .all(parameter):
+//            return .requestParameters(parameters: parameter.parameters, encoding: JSONEncoding.default)
+//        }
+//    }
+//
+//    var path: String {
+//        switch self {
+//        case .all:
+//            return "/youzy.dms.basiclib.api.college.query"
+//        }
+//    }
+//
+//    var method: Moya.Method {
+//        return .post
+//    }
+//
+//    var baseURL: URL {
+//        switch self {
+//        default:
+//            return URL(string: "http://qa-apigateway.youzy.cn")!
+//        }
+//    }
+//
+//    var headers: [String : String]? {
+//        return nil
+//    }
+//}
 
 struct CollegeListParameter: Encodable {
     /// 关键词

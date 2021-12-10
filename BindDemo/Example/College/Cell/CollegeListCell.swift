@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import EGKit
+import Base
 
 class CollegeListCell: UICollectionViewCell, CellConfigurable {
 
@@ -17,7 +17,6 @@ class CollegeListCell: UICollectionViewCell, CellConfigurable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: topAnchor),
             contentView.leftAnchor.constraint(equalTo: leftAnchor),
@@ -28,7 +27,7 @@ class CollegeListCell: UICollectionViewCell, CellConfigurable {
     }
 
     static var nib: UINib? {
-        return UINib(nibName: reuseableIdentifier, bundle: nil)
+        return UINib(nibName: identifier, bundle: nil)
     }
 
     func configure(_ item: CollegeList.Item) {
